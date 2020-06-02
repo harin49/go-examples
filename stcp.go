@@ -45,6 +45,6 @@ func main() {
 		fmt.Print("->", string(netData))
 		t := time.Now()
 		myTime := t.Format(time.RFC822) + "\n"
-		c.Write([]byte(myTime))
+		fmt.Fprintf(c, myTime+"\n")
 	}
 }
